@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section id="form">
+    <dif class="container">
+           <dif class="row">
+                <dif class="col-md-15">
+                    {% for message in messages %}
+                        {% if messages %}
+                            <div class="alret alret-success">{{ message }}</div>
+                        {% endif %}
+                    {% endfor %}
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <button type="submit" class="btn btn=primary">Tambah</button>
+                        <a href="/Vbrg" class="btn btn-danger">kembali</a>
+                    </form>
+                 </dif>
+            </dif>
+    </dif>
+   
+                    
+</section>
+{% endblock %}

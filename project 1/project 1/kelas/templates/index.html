@@ -1,0 +1,66 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+
+        </ul>
+        <form class="d-flex">
+          <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn-1" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleControls" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'img/buster.png'%}" class="d-block w-100" alt="...">
+      </div>
+      <!-- <div class="carousel-item">
+        <img src="{% static 'img/saint.png'%}" class="d-block w-100" alt="...">
+      </div> -->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <h3>Kategori</h3>
+  <section class="category">
+    <div class="container">
+      <div class="container-link">
+        <img src="{% static 'img/sd.png'%}" style="width: 70px;"></a>
+      </div>
+      <div class="container-link">
+       <img src="{%static 'img/pg.png'%}" style="width: 70px;"></a>
+      </div>
+      <div class="container-link">
+        <img src="{% static 'img/mg.png'%}" style="width: 70px;"></a>
+      </div>
+      <div class="container-link">
+        <img src="{% static 'img/tool.png'%}" style="width: 70px;"></a>
+      </div>
+  </section>
+        <h2><marquee>Gundam Online Shop Distributor resmi satu satunya di Indonesia</marquee></h2>
+        <p>Koleksi gundam di rumah anda segera <br> Dapatkan kesenangan yang tidak biasa anda miliki. </p>
+        <center><a href="About.html"<button type="button" class="btn btn-outline-dark" id="btn-dark">About</button></a></center>
+    <tr class="col">
+      <td>
+        <center><a href="#">www.GundamOnline.com</a></center>
+      </td>
+      <center><a href="#">084 672 223 007</a></center>
+      <td>
+        <center><a href="#">Help</a></center>
+      </td>
+    </tr>
+  </table>
+
+</html>
+
+{% endblock %}

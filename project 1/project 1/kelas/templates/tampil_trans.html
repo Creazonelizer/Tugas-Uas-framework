@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+<h2 class="text-center">Daftar Transaksi</h2>
+<table border="1"> 
+    <tr>
+        <th></th>
+        <th>Kode trans</th>
+        <th>Nama</th>
+        <th>Stock</th>
+        <th>Harga</th>
+        <th>Link Gambar</th>
+        <th>Jenis</th>
+    </tr>
+
+{% for Transaksi in trans %}
+    <tr>
+        <td>{{ Transaksi.kodebrng }}</td>
+        <td>{{ Transaksi.nama }}</td>
+        <td>{{ Transaksi.stok }}</td>
+        <td>{{ Transaksi.harga }}</td>
+        <td>{{ Transaksi.link_gbr}}</tdr>
+        <td>{{ Transaksi.jenis_id_id}}</td>
+    <tr>
+{% endfor %}
+</table>
+{% endblock %}

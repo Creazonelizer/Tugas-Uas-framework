@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+<h2 class="text-center">Daftar Barang</h2>
+<p><a href="/addbrg" class="btn btn-primary">Tambah Data</a></p>
+{% for message in message %}
+    {% if message %}
+        <div class="alret alret-success">{{ message }}</div>
+    {% endif %}
+{% endfor %}
+<table border="1"> class="table table-success table-striped"
+    <tr>
+        <th>Kode Barang</th>
+        <th>Nama</th>
+        <th>Stock</th>
+        <th>Harga</th>
+        <th>Link Gambar</th>
+        <th>Jenis</th>
+        <th>Aksi</th>
+    </tr>
+
+{% for Barang in barangs %}
+    <tr>
+        <td><a href="{% url  'ubah_brg' Barang.id %}">{{ Barang.kodebrng }}</a></td>
+        <td>{{ Barang.nama_barang }}</td>
+        <td>{{ Barang.stok }}</td>
+        <td>{{ Barang.harga }}</td>
+        <td>{{ Barang.link_gbr}}</td> 
+        <!--jika menampilkan indeks jenis,Baranag.jenis_id_id-->    
+        <td>{{ Barang.jenis_id_id}}</td> <!--ini temuan baru ! menamilkan  nama jenis-->
+
+
+ <!-- Button trigger modal -->
+ <td>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    hapus
+  </button>
+</td>
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>             
+    <tr>
+{% endfor %}
+</table>
+{% endblock %}
